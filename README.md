@@ -1,2 +1,0 @@
-# sample-android
-Tripod sample

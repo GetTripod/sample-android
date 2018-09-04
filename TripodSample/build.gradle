@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'tripod'
+            keyPassword 'tripod'
+            storeFile file('/Keystore/Tripod.jks')
+            storePassword 'tripod'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.gendevs.tripodsample"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url 'https://maven.google.com'
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation(group: 'com.gendevs.tripod', name: 'TripodLibrary', version: '1.0.0', ext: 'aar')
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+}
