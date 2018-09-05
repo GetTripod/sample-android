@@ -44,6 +44,6 @@ repositories {
 dependencies {
     implementation 'com.google.code.gson:gson:2.3.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation(group: 'com.gendevs.tripod', name: 'TripodLibrary', version: '1.0.0', ext: 'aar')
-    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation(group: 'com.gendevs.tripod', name: 'TripodLibrary', version: '1.0', ext: 'aar')
+
 }
