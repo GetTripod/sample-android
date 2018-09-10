@@ -11,7 +11,7 @@ public class TripodApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Tripod tripod = new Tripod("87597033365b540");
+        Tripod tripod = new Tripod("02b3ea3e78c0565");
         tripod.setup(this,true);
 
     }
