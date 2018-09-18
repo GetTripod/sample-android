@@ -2,12 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        config {
-            keyAlias 'tripod'
-            keyPassword 'tripod'
-            storeFile file('/Keystore/Tripod.jks')
-            storePassword 'tripod'
-        }
     }
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
@@ -19,14 +13,12 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled true
             multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
     }
     productFlavors {
@@ -44,6 +36,5 @@ repositories {
 dependencies {
     implementation 'com.google.code.gson:gson:2.3.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation(group: 'com.gendevs.tripod', name: 'tripodlibrary', version: '1.0.0', ext: 'aar')
-
+    implementation 'com.gendevs.tripod:tripodlibrary:1.0.0@aar'
 }
