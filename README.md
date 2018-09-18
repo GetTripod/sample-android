@@ -1,8 +1,5 @@
 # sample-android
 
-
-
-
 This is Sample Application to demonstrate how to use Tripod android library .
 
 Tripod is an Innovative product that will help developers, testers, managers and companies to build quality apps productively.
